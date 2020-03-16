@@ -1,30 +1,196 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
+    <meta charset="utf-8">
     <title><%= title %></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/images/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel='stylesheet' href='/bootstrap/css/bootstrap.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <div class="contact-form my-4">
-      <h2>Reach me out</h2>
-      <form class="contact-form" action="/send-contact-form" method="post">
-        <label class="d-flex flex-column">
-          <input type="text" name="name" placeholder="Name">
-        </label>
-        <label class="d-flex flex-column">
-          <input type="email" name="email" placeholder="Email">
-        </label>
-        <label class="d-flex flex-column">
-          <input type="textarea" name="message" placeholder="Message">
-        </label>
-        <input class="btn btn-primary submit-btn" type="submit" value="Send!">
-      </form>
+</head>
+
+<body>
+    <div class="container home home-container d-flex justify-content-center flex-column">
+        <img src="/images/guest.png">
+        <div class="host d-flex"><strong>HOST:</strong>
+            <p>Cristina Moreno</p>
+        </div>
+        <div class="party d-flex"><strong>PARTY:</strong>
+            <p>House warming party</p>
+        </div>
+        <div class="location d-flex flex-column justify-content-center">
+            <div class="d-flex location-info"><strong>LOCATION: </strong>
+                <p>Playa Guitarrón 371, Militar Marte, 08830 Ciudad de México CDMX, México</p>
+            </div>
+            <div class="g-map-iframe" style="width: 100%"><iframe width="100%" height="400"
+                    src="https://maps.google.com/maps?width=100%&height=400&hl=es&coord=19.3789229, -99.131934&q=368%20Playa%20Guitarr%C3%B3n+(PartyApp)&ie=UTF8&t=&z=15&iwloc=B&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a
+                        href="https://www.mapsdirections.info/calcular-ruta.html">Planificador de Ruta</a></iframe>
+            </div>
+            <a href="https://goo.gl/maps/KAH4VRBhk9z">GO TO MAPS</a>
+        </div>
+        <div
+            class="codes-info d-flex justify-content-center justify-content-sm-between justify-content-md-between justify-content-lg-between flex-wrap">
+            <div class="dress-code d-flex">
+                <div class="img-container d-flex justify-content-center align-items-center"><img
+                        src="/images/dress-code.png"></div>
+                <div class="dress-code-info"><strong>DRESSCODE:</strong>
+                    <p>INFORMAL</p>
+                </div>
+            </div>
+            <div class="food-code d-flex">
+                <div class="img-container d-flex justify-content-center align-items-center"><img
+                        src="/images/food-code.png"></div>
+                <div class="food-code-info"><strong>PLAN:</strong>
+                    <p>PIZZA & BEER</p>
+                </div>
+            </div>
+        </div>
+        <div class="guests d-flex flex-wrap justify-content-center">
+            <div class="guest-card left">
+                <img src="/images/guests/aryastark.jpg">
+                <div class="guest-card-info">
+                    <p class="guest-card-info-name">Arya Stark</p>
+                    <i class="guest-card-info-job"> Third child and second daughter of Lord Eddard Stark.</i>
+                </div>
+            </div>
+            <div class="guest-card right">
+                <img src="/images/guests/bienneoftarth.jpg">
+                <div class="guest-card-info">
+                    <p class="guest-card-info-name">Brienne of Tarth</p>
+                    <i class="guest-card-info-job"> Only living child and heir of Lord Selwyn Tarth of Evenfall.</i>
+                </div>
+            </div>
+            <div class="guest-card left">
+                <img src="/images/guests/daenerystargaryen.jpg">
+                <div class="guest-card-info">
+                    <p class="guest-card-info-name">Daenerys Targaryen</p>
+                    <i class="guest-card-info-job"> Youngest child of King Aerys II Targaryen.</i>
+                </div>
+            </div>
+            <div class="guest-card right">
+                <img src="/images/guests/drogo.jpg">
+                <div class="guest-card-info">
+                    <p class="guest-card-info-name">Drogon</p>
+                    <i class="guest-card-info-job"> One of the dragons born in the Dothraki sea.</i>
+                </div>
+            </div>
+            <div class="guest-card left">
+                <img src="/images/guests/jamielannister.jpg">
+                <div class="guest-card-info">
+                    <p class="guest-card-info-name">Jamie Lannister</p>
+                    <i class="guest-card-info-job"> Second child and first-born son of Lord Tywin Lannister.</i>
+                </div>
+            </div>
+            <div class="guest-card right">
+                <img src="/images/guests/jonsnow.jpg">
+                <div class="guest-card-info">
+                    <p class="guest-card-info-name">Jon Snow</p>
+                    <i class="guest-card-info-job"> Bastard son of Eddard Stark, Lord of Winterfell.</i>
+                </div>
+            </div>
+            <div class="guest-card left">
+                <img src="/images/guests/tyrionlannister.jpg">
+                <div class="guest-card-info">
+                    <p class="guest-card-info-name">Tyrion Lannister</p>
+                    <i class="guest-card-info-job"> Third and youngest child of Lord Tywin Lannister</i>
+                </div>
+            </div>
+            <div class="guest-card right">
+                <img src="/images/guests/jorahmormont.jpg">
+                <div class="guest-card-info">
+                    <p class="guest-card-info-name">Jorah Mormont</p>
+                    <i class="guest-card-info-job"> Exiled knight, the former head of House Mormont and Lord of Bear
+                        Island</i>
+                </div>
+            </div>
+            <div class="guest-card left">
+                <img src="/images/guests/missandei.jpg">
+                <div class="guest-card-info">
+                    <p class="guest-card-info-name">Missandei</p>
+                    <i class="guest-card-info-job"> Naathi scribe in service to Kraznys mo Nakloz, one of the Good
+                        Masters of Astapor</i>
+                </div>
+            </div>
+            <div class="guest-card right">
+                <img src="/images/guests/samwelltarly.jpg">
+                <div class="guest-card-info">
+                    <p class="guest-card-info-name">Samwell Tarly</p>
+                    <i class="guest-card-info-job"> Eldest son of Lord Randyll Tarly and his wife Melessa Florent.</i>
+                </div>
+            </div>
+        </div>
+        <div class="chosing-plan d-flex flex-column">
+            <strong>CHOOSE THE DATE (ACTION REQUIRED)</strong>
+            <a class="doodle" href="https://doodle.com/poll/dzcm2cu8p6pvur3f" target="_blank">Go to Doodle</a>
+            <strong>CHOOSE THE FOOD</strong>
+            <a class="telepizza" href="https://www.telepizza.es/" target="_blank">Go to Telepizza</a>
+        </div>
+        <div class="contact-form">
+            <strong>LET'S GET DOWN TO BUSINESS</strong>
+            <div class="reminder">
+                <p><span class="highlight">REMEMBER TO CHOOSE A SUITABLE</span></p>
+                <p><span class="highlight"> DAY FOR THE PARTY (DOODLE)</span></p>
+            </div>
+            <form action="/send-contact-form" method="post" class="needs-validation">
+
+                <div class="form-group contact-name">
+                    <label for="contact-name">Your Name*</label>
+                    <input type="text" class="form-control" name="name" id="contact-name"
+                        placeholder="Daenerys Targaryen" required>
+                </div>
+
+                <div class="form-group contact-mail">
+                    <label for="contact-mail">Your Email*</label>
+                    <input type="email" class="form-control" name="email" id="contact-mail"
+                        placeholder="lakhaleese@gmail.com" required>
+                </div>
+
+                <div class="form-group d-flex flex-column contact-comming">
+                    <label>May I wait for you?*</label>
+                    <div><input type="radio" name="comming" value="yes" name="comming" required>Yes!! </div>
+                    <div><input type="radio" name="comming" value="no" name="comming" required>No </div>
+                    <div><input type="radio" name="comming" value="depends" name="comming" required>It depends... </div>
+                </div>
+
+                <div class="form-group contact-pizza">
+                    <label for="contact-pizza">Tell me about your favourite pizza*</label>
+                    <textarea class="form-control" id="contact-pizza" name="pizza" rows="3" placeholder="Crispy Bacon"
+                        required></textarea>
+                </div>
+
+                <div class="form-group contact-message">
+                    <label for="exampleFormControlTextarea1">Anything to add?</label>
+                    <textarea class="form-control" id="message" name="message" rows="3"
+                        placeholder="Sorry Cris, I won't come... I have a queen to kill"></textarea>
+                </div>
+
+                <button class="submit-button" type="submit" type="submit" value="Send!">Submit</button>
+            </form>
+        </div>
     </div>
     <script src="/jquery/jquery.js"></script>
     <script src="/popper.js/popper.js"></script>
     <script src="/bootstrap/js/bootstrap.js"></script>
-  </body>
+</body>
+
 </html>

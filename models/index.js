@@ -3,7 +3,7 @@ require('dotenv').config()
 
 module.exports = {
   storeMessage: function(con, data, callback){
-    con.query(`INSERT INTO contact_form VALUES (NULL, '${data.name}', '${data.email}', '${data.message}')`, function(err, res){
+    con.query(`INSERT INTO contact_form VALUES (NULL, '${data.name}', '${data.email}', '${data.message}', '${data.comming}', '${data.pizza}')`, function(err, res){
     var mail = process.env.MAIL;
     var pwd = process.env.MAILPWD;
       if (err) {

@@ -1,0 +1,229 @@
+@include respond-above (xs) {
+    .home-container{
+        width: 450px;
+    }
+}
+@include respond-below (xs) {
+    .home-container{
+        width: 100%;
+    }
+    .codes-info{
+        margin-bottom: 0 !important;
+        .dress-code{
+            margin-bottom: 10px !important;
+        }
+        .dress-code, .food-code{
+            margin: 0 auto;
+        }
+        .dress-code-info{
+            padding: 10px 40px !important;
+        }
+        .food-code-info{
+            padding: 10px 50px !important;
+        }
+    }
+    .guests{
+        background-color: transparent !important;
+        .left{
+            margin: 10px 0 !important;
+        }
+        .right{
+            margin: 10px 0 !important;
+        }
+        .guest-card{
+            width: 100% !important;
+        }
+    }
+    .chosing-plan{
+        margin-top: 0 !important;
+    }
+}
+body{
+    background-image: url("/images/9xL3.gif");
+}
+.home-container{
+    background-color: $yellow;
+    margin-top: 120px;
+    border-radius: 30px;
+    box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+    padding: 0 20px 0 20px;
+    img{
+        height: 130px;
+        width: 130px;
+        margin: -65px auto 14px auto;
+    }
+    .location{
+        border-radius: 14px;
+    }
+    .host, .party, .codes-info{
+        border-radius: 30px;
+    }
+    .host, .party, .location, .codes-info{
+        margin: 0 0 20px 0;
+        background-color: white;
+        padding: 5px 20px;
+        strong{
+            font-size: 20px;
+        }
+        p{
+            margin: 0;
+            font-size: 16px;
+            padding: 3px 0 0 5px;
+        }
+    }
+    .location{
+        margin-bottom: 30px;
+        // .location-info{
+        // }
+        a{
+            margin: 0 auto;
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
+        a:hover{
+            background-color: $yellow;
+            color: black;
+        }
+        .g-map-iframe{
+            margin-bottom: 20px;
+        }
+    }
+    .codes-info{
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin-bottom: 30px;
+        .img-container{
+            background-color: white;
+            border: none;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            padding: 0 10px;
+            img{
+                background-color: white;
+                border: none;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+        }
+        .dress-code, .food-code{
+            border-radius: 10px;
+            border: none;
+            img{
+                height: 50px;
+                width: auto;
+                margin: 0;
+            }
+            .dress-code-info, .food-code-info{
+                padding: 3px 10px 3px 10px;
+                background-color: black;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                color: white;
+                strong, p{
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+    .guests{
+        background-color: white;
+        border-radius: 14px;
+        padding: 20px 0;
+        .left{
+            margin: 10px 10px 0 0 ;
+        }
+        .right{
+            margin: 10px 0 0 10px;
+        }
+        .guest-card{
+            border-radius: 10px;
+            width: 40%;
+            padding: 0;
+            img{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: auto;
+                border-top-right-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+            .guest-card-info{
+                background-color: black;
+                color: white;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                padding: 10px;
+                p, i{
+                    margin: 0;
+                    padding: 0;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .chosing-plan{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background-color: white;
+        border-radius: 14px;
+        padding: 20px;
+        a{
+            padding: 10px 0;
+            text-align: center;
+            border-radius: 30px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .doodle{
+            background-color: #3798d4 !important;
+        }
+        .telepizza{
+            background-color: #e20119 !important;
+        }
+    }
+    .contact-form{
+        background-color: white;
+        padding: 20px;
+        border-radius: 14px;
+        margin-bottom: 20px;
+
+        .reminder{
+            margin-top: 10px;
+            p{
+                margin: 0 0 10px 0;
+            }
+            span{
+                margin: 0;
+                padding: 5px;
+                border-radius: 5px;
+            }
+        }
+        .contact-comming{
+            input{
+                margin-right: 5px;
+            }
+        }
+        .submit-button{
+            margin: 0 auto;
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+            width: 100%;
+            text-align: center;
+            border-radius: 30px;
+            border: none;
+        }
+        .submit-button:hover{
+            background-color: $yellow;
+            color: black;
+        }
+    }
+}
+/*# sourceURL=base/MODULE/_home.scss */

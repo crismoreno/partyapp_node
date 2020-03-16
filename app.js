@@ -33,8 +33,11 @@ app.use(cookieParser());
 app.use(sassMiddleware({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),
-  indentedSyntax: true, // true = .sass and false = .scss
-  sourceMap: true
+  // prefix:  '/stylesheets',
+  indentedSyntax: false, // true = .sass and false = .scss
+  outputStyle: 'compressed',
+  sourceMap: false,
+  debug: true
 }));
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: 10}));
 app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'));

@@ -1,0 +1,51 @@
+h1{
+
+}
+
+h2{
+
+}
+
+h3{
+}
+
+h4{
+
+}
+
+h5{
+
+}
+
+h6{
+
+}
+
+p, li, i, strong{
+    font-family:  $sourcesans;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: unset;
+    font-family:  $sourcesans;
+}
+
+ul, ol, li{
+    list-style-type: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family:  $sourcesans;
+}
+
+label{
+    font-family:  $sourcesans;
+}
+
+span.highlight{
+    background-color: yellow;
+}
+
+/*# sourceURL=base/BASE/_common.scss */
+/*# sourceURL=base/BASE/_common.scss */
