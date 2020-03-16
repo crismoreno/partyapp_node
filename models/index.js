@@ -39,7 +39,7 @@ module.exports = {
           }
         });
 
-        var mail = {
+        var mailtoCris = {
           from: name,
           to: mail,
           subject: `New Message at PartyApp from ${name}`,
@@ -50,11 +50,40 @@ module.exports = {
           Message: ${message}`
         }
 
-        transporter.sendMail(mail, (err, data) => {
+        var mailtoHost = {
+          from: mail,
+          to: email,
+          subject: `Are you ready for the party?`,
+          text: `
+          Hello dear person interested in this project,
+          I noticed you sent me a contact form through the PartyApp Platform.
+
+          Note that the data submitted was:
+          Name: ${name}
+          Comming: ${comming}
+          Pizza: ${pizza}
+          Message: ${message}
+
+          Not bad aha?!
+
+          Thank you for your interest and time taken to test this feature :)
+          In case you want to have further information about me or want to reach me out for future collabs or job opportunities, I'm just a click away!
+
+          I hope you have a wonderful day, don't hesitate to check my personal website at: https://www.notcalpi.me
+          `
+        }
+
+        transporter.sendMail(mailtoCris, (err, data) => {
           if (err) {
             callback(err, null);
           } else {
-            callback(null, res);
+            transporter.sendMail(mailtoHost, (err, data) => {
+              if (err) {
+                callback(err, null);
+              } else {
+                callback(null, res);
+              }
+            })
           }
         })
       }
