@@ -1,9 +1,8 @@
-var express = require('express');
-var router = express.Router();
+const express = require("express")
+const router = express.Router()
+const indexController = require("../controllers/index")
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
 
-module.exports = router;
+router.get("/", indexController.index);
+router.post("/send-contact-form", indexController.sendContactForm);
+module.exports = router

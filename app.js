@@ -5,14 +5,26 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+
+
+
+//DB
+var con = require('./config/db_connect');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+
+// connecting route to database
+app.use(function(req, res, next) {
+  req.con = con
+  next()
+})
+
+
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -24,10 +36,17 @@ app.use(sassMiddleware({
   indentedSyntax: true, // true = .sass and false = .scss
   sourceMap: true
 }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: 10}));
+app.use('/bootstrap', express.static(__dirname + '/node_modules/bootstrap/dist'));
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist'));
+app.use('/popper.js', express.static(__dirname + '/node_modules/popper.js/dist/umd'));
+
+
+
+//ROUTER
+var indexRouter = require('./routes/index');
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

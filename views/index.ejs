@@ -2,10 +2,29 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel='stylesheet' href='/bootstrap/css/bootstrap.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <div class="contact-form my-4">
+      <h2>Reach me out</h2>
+      <form class="contact-form" action="/send-contact-form" method="post">
+        <label class="d-flex flex-column">
+          <input type="text" name="name" placeholder="Name">
+        </label>
+        <label class="d-flex flex-column">
+          <input type="email" name="email" placeholder="Email">
+        </label>
+        <label class="d-flex flex-column">
+          <input type="textarea" name="message" placeholder="Message">
+        </label>
+        <input class="btn btn-primary submit-btn" type="submit" value="Send!">
+      </form>
+    </div>
+    <script src="/jquery/jquery.js"></script>
+    <script src="/popper.js/popper.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
   </body>
 </html>
