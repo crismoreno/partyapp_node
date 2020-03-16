@@ -3,7 +3,12 @@ var url = require('url');
 
 var controller = {
   index: function (req, res){
-    res.render('index', {title: 'PartyApp'})
+    if (url.parse(req.url, true).query) {
+      var query = url.parse(req.url, true).query;
+    } else {
+      var query = false;
+    }
+    res.render('index', {title: 'PartyApp', query: query.success})
   },
   sendContactForm: function (req, res) {
     indexModel.storeMessage(req.con, req.body, function (err, result) {

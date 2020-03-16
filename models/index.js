@@ -44,6 +44,7 @@ module.exports = {
           to: mail,
           subject: `New Message at PartyApp from ${name}`,
           text: `
+          Name: ${name}
           Comming: ${comming}
           Pizza: ${pizza}
           Message: ${message}`

@@ -146,6 +146,11 @@
             <a class="telepizza" href="https://www.telepizza.es/" target="_blank">Go to Telepizza</a>
         </div>
         <div class="contact-form">
+            <%if (query != undefined) { %>
+                <div class="alert alert-success" role='alert'>
+                    <p class="my-0">Your message was sent properly!</p>
+                </div>
+            <% } %>
             <strong>LET'S GET DOWN TO BUSINESS</strong>
             <div class="reminder">
                 <p><span class="highlight">REMEMBER TO CHOOSE A SUITABLE</span></p>
