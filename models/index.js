@@ -3,7 +3,18 @@ require('dotenv').config()
 
 module.exports = {
   storeMessage: function(con, data, callback){
-    con.query(`INSERT INTO contact_form VALUES (NULL, '${data.name}', '${data.email}', '${data.message}', '${data.comming}', '${data.pizza}')`, function(err, res){
+    var name = data.name;
+    var email = data.email;
+    var comming = data.comming;
+    var pizza = data.pizza;
+    var formated_pizza = data.pizza.replace("'", "/");
+    var formated_message = data.message.replace("'", "/");
+    var message = data.message;
+
+
+    console.log('formated_message', formated_message)
+
+    con.query(`INSERT INTO contact_form VALUES (NULL, '${name}', '${email}', '${formated_message}', '${comming}', '${formated_pizza}')`, function(err, res){
     var mail = process.env.MAIL;
     var pwd = process.env.MAILPWD;
       if (err) {
@@ -28,16 +39,14 @@ module.exports = {
           }
         });
 
-        var name = data.name
-        var email = data.email
-        var tel = data.tel
-        var message = data.message
-
         var mail = {
           from: name,
           to: mail,
-          subject: 'New Message from Contact Form',
-          text: message, email, tel
+          subject: `New Message at PartyApp from ${name}`,
+          text: `
+          Comming: ${comming}
+          Pizza: ${pizza}
+          Message: ${message}`
         }
 
         transporter.sendMail(mail, (err, data) => {
