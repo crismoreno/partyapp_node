@@ -22,9 +22,9 @@ module.exports = {
       }else{
         var transport = {
           service: 'Gmail',
-          host: 'smtp.gmail.com',
-          port: 587,
-          secure: false,
+          // host: 'smtp.gmail.com',
+          // port: 587,
+          // secure: false,
           auth: {
             user: mail,
             pass: pwd
