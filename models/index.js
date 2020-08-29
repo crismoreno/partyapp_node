@@ -21,7 +21,7 @@ module.exports = {
         callback(err, null);
       }else{
         var transport = {
-          // service: 'gmail',
+          service: 'Gmail',
           host: 'smtp.gmail.com',
           port: 587,
           secure: false,
