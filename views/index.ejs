@@ -66,78 +66,15 @@
             </div>
         </div>
         <div class="guests d-flex flex-wrap justify-content-center">
-            <div class="guest-card left">
-                <img src="/images/guests/aryastark.jpg">
-                <div class="guest-card-info">
-                    <p class="guest-card-info-name">Arya Stark</p>
-                    <i class="guest-card-info-job"> Third child and second daughter of Lord Eddard Stark.</i>
-                </div>
-            </div>
-            <div class="guest-card right">
-                <img src="/images/guests/bienneoftarth.jpg">
-                <div class="guest-card-info">
-                    <p class="guest-card-info-name">Brienne of Tarth</p>
-                    <i class="guest-card-info-job"> Only living child and heir of Lord Selwyn Tarth of Evenfall.</i>
-                </div>
-            </div>
-            <div class="guest-card left">
-                <img src="/images/guests/daenerystargaryen.jpg">
-                <div class="guest-card-info">
-                    <p class="guest-card-info-name">Daenerys Targaryen</p>
-                    <i class="guest-card-info-job"> Youngest child of King Aerys II Targaryen.</i>
-                </div>
-            </div>
-            <div class="guest-card right">
-                <img src="/images/guests/drogo.jpg">
-                <div class="guest-card-info">
-                    <p class="guest-card-info-name">Drogon</p>
-                    <i class="guest-card-info-job"> One of the dragons born in the Dothraki sea.</i>
-                </div>
-            </div>
-            <div class="guest-card left">
-                <img src="/images/guests/jamielannister.jpg">
-                <div class="guest-card-info">
-                    <p class="guest-card-info-name">Jamie Lannister</p>
-                    <i class="guest-card-info-job"> Second child and first-born son of Lord Tywin Lannister.</i>
-                </div>
-            </div>
-            <div class="guest-card right">
-                <img src="/images/guests/jonsnow.jpg">
-                <div class="guest-card-info">
-                    <p class="guest-card-info-name">Jon Snow</p>
-                    <i class="guest-card-info-job"> Bastard son of Eddard Stark, Lord of Winterfell.</i>
-                </div>
-            </div>
-            <div class="guest-card left">
-                <img src="/images/guests/tyrionlannister.jpg">
-                <div class="guest-card-info">
-                    <p class="guest-card-info-name">Tyrion Lannister</p>
-                    <i class="guest-card-info-job"> Third and youngest child of Lord Tywin Lannister</i>
-                </div>
-            </div>
-            <div class="guest-card right">
-                <img src="/images/guests/jorahmormont.jpg">
-                <div class="guest-card-info">
-                    <p class="guest-card-info-name">Jorah Mormont</p>
-                    <i class="guest-card-info-job"> Exiled knight, the former head of House Mormont and Lord of Bear
-                        Island</i>
-                </div>
-            </div>
-            <div class="guest-card left">
-                <img src="/images/guests/missandei.jpg">
-                <div class="guest-card-info">
-                    <p class="guest-card-info-name">Missandei</p>
-                    <i class="guest-card-info-job"> Naathi scribe in service to Kraznys mo Nakloz, one of the Good
-                        Masters of Astapor</i>
-                </div>
-            </div>
-            <div class="guest-card right">
-                <img src="/images/guests/samwelltarly.jpg">
-                <div class="guest-card-info">
-                    <p class="guest-card-info-name">Samwell Tarly</p>
-                    <i class="guest-card-info-job"> Eldest son of Lord Randyll Tarly and his wife Melessa Florent.</i>
-                </div>
-            </div>
+					<% for(var i=0; i<guests.length; i++) {%>
+						<div class="guest-card right">
+							<img src=<%= guests[i].pic %>>
+							<div class="guest-card-info">
+									<p class="guest-card-info-name"><%= guests[i].name %></p>
+									<i class="guest-card-info-job"><%= guests[i].job %></i>
+							</div>
+						</div>
+					<% } %>
         </div>
         <div class="chosing-plan d-flex flex-column">
             <strong>CHOOSE THE DATE (ACTION REQUIRED)</strong>
